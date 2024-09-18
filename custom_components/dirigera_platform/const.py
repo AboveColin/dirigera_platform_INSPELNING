@@ -1,2 +1,2 @@
 DOMAIN = "dirigera_platform"
-CONF_HIDE_DEVICE_SET_BULBS="hide_device_set_bulbs"
+CONF_HIDE_DEVICE_SET_BULBS = "hide_device_set_bulbs"

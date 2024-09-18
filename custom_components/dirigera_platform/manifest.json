@@ -1,6 +1,7 @@
 {
     "domain": "dirigera_platform",
     "name": "IKEA Dirigera Hub Integration",
+    "version": "0.0.3",
     "requirements": [
         "dirigera @ git+https://github.com/AboveColin/dirigera-INSPELNING@v1.0.0"
     ],
@@ -9,8 +10,6 @@
     "codeowners": ["@sanjoyg"],
     "config_flow": true,
     "documentation": "https://github.com/sanjoyg/dirigera_platform",
-    "iot_class": "local_polling",
     "issue_tracker": "https://github.com/sanjoyg/dirigera_platform",
-    "loggers": ["custom_components.dirigera_platform"],
-    "version": "0..02"
+    "homeassistant": ">=2023.4.0"
 }
