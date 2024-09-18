@@ -1,9 +1,9 @@
 {
     "domain": "dirigera_platform",
     "name": "IKEA Dirigera Hub Integration",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "requirements": [
-        "dirigera @ git+https://github.com/AboveColin/dirigera-INSPELNING@v1.0.0"
+        "dirigera @ git+https://github.com/AboveColin/dirigera-INSPELNING@main"
     ],
     "dependencies": [],
     "after_dependencies": ["http"],
