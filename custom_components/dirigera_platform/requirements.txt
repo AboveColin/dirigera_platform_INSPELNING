@@ -1,1 +1,1 @@
-dirigera==1.1.9
+dirigera @ git+https://github.com/AboveColin/dirigera-INSPELNING@main

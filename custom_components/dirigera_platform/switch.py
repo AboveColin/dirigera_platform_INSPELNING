@@ -21,14 +21,11 @@ async def async_setup_entry(
     async_add_entities,
 ):
     logger.debug("SWITCH Starting async_setup_entry")
-    """Setup sensors from a config entry created in the integrations UI."""
     config = hass.data[DOMAIN][config_entry.entry_id]
-    # hub = dirigera.Hub(config[CONF_TOKEN], config[CONF_IP_ADDRESS])
     hub = Hub(config[CONF_TOKEN], config[CONF_IP_ADDRESS])
 
     outlets = []
 
-    # If mock then start with mocks
     if config[CONF_IP_ADDRESS] == "mock":
         logger.warning("Setting up mock outlets...")
         mock_outlet1 = ikea_outlet_mock(hub, "mock_outlet1")
@@ -62,3 +59,25 @@ class ikea_outlet(ikea_base_device, SwitchEntity):
             logger.error("error encountered turning off : {}".format(self.name))
             logger.error(ex)
             raise HomeAssistantError(ex, DOMAIN, "hub_exception")
+
+    @property
+    def is_on(self):
+        return self._json_data.attributes.is_on
+
+    @property
+    def extra_state_attributes(self):
+        """Return the state attributes."""
+        logger.error("extra_state_attributes called")
+        logger.error(self._json_data.attributes)
+        return {
+            "energy_consumed_at_last_reset": getattr(self._json_data.attributes, 'energy_consumed_at_last_reset', None),
+            "current_active_power": getattr(self._json_data.attributes, 'current_active_power', None),
+            "current_amps": getattr(self._json_data.attributes, 'current_amps', None),
+            "current_voltage": getattr(self._json_data.attributes, 'current_voltage', None),
+            "total_energy_consumed": getattr(self._json_data.attributes, 'total_energy_consumed', None),
+            "total_energy_consumed_last_updated": getattr(self._json_data.attributes, 'total_energy_consumed_last_updated', None),
+            "product_code": getattr(self._json_data.attributes, 'product_code', None),
+            "serial_number": getattr(self._json_data.attributes, 'serial_number', None),
+            "firmware_version": getattr(self._json_data.attributes, 'firmware_version', None),
+            "model": getattr(self._json_data.attributes, 'model', None),
+        }
