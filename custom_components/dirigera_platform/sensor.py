@@ -313,16 +313,6 @@ class ikea_outlet_current_active_power(ikea_base_device_sensor, SensorEntity):
     @property
     def native_unit_of_measurement(self):
         return "W"
-    
-    async def async_update(self):
-        if self._updated_at is None or (datetime.datetime.now() - self._updated_at).total_seconds() > 20:
-            try:
-                logger.debug("Energy consumed sensor update called...")
-                self._device = await self._hass.async_add_executor_job(self._hub.get_outlet_by_id, self._device.id)
-                self._updated_at = datetime.datetime.now()
-            except Exception as ex:
-                logger.error(f"Error updating energy consumed sensor: {ex}")
-                raise
 
 class ikea_outlet_current_amps(ikea_base_device_sensor, SensorEntity):
     def __init__(self, device):
