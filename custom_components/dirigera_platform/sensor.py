@@ -106,8 +106,7 @@ async def async_setup_entry(
                 ikea_outlet_current_amps(outlet_entity),
                 ikea_outlet_current_voltage(outlet_entity),
                 ikea_outlet_total_energy_consumed_last_updated(outlet_entity),
-                ikea_outlet_time_of_last_energy_reset(outlet_entity),
-                ikea_outlet_light_level(outlet_entity),
+                ikea_outlet_time_of_last_energy_reset(outlet_entity)
             ])
 
     logger.debug("Found {} env devices to setup...".format(len(env_devices)))
