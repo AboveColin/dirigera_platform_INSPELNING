@@ -296,6 +296,10 @@ class ikea_outlet_energy_consumed(ikea_base_device_sensor, SensorEntity):
     @property
     def native_unit_of_measurement(self):
         return "kWh"
+    
+    @property
+    def state_class(self) -> str:
+        return "total_increasing"
 
 class ikea_outlet_current_active_power(ikea_base_device_sensor, SensorEntity):
     def __init__(self, device):

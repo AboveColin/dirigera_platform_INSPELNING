@@ -35,10 +35,10 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 hub_events = None 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    logger.error("Starting async_setup...")
+    logger.info("Starting async_setup...")
     for k in config.keys():
-        logger.error(f"config key: {k} value: {config[k]}")
-    logger.error("Complete async_setup...")
+        logger.info(f"config key: {k} value: {config[k]}")
+    logger.info("Complete async_setup...")
 
     def handle_dump_data(call):
         from . import dirigera_new
@@ -70,9 +70,9 @@ async def async_setup_entry(
 ) -> bool:
     global hub_events
     """Set up platform from a ConfigEntry."""
-    logger.error("Staring async_setup_entry in init...")
-    logger.error(dict(entry.data))
-    logger.error(f"async_setup_entry {entry.unique_id} {entry.state} {entry.entry_id} {entry.title} {entry.domain}")
+    logger.info("Staring async_setup_entry in init...")
+    logger.info(dict(entry.data))
+    logger.info(f"async_setup_entry {entry.unique_id} {entry.state} {entry.entry_id} {entry.title} {entry.domain}")
     hass.data.setdefault(DOMAIN, {})
     hass_data = dict(entry.data)
 
