@@ -2,14 +2,14 @@ import datetime
 from enum import Enum
 import logging
 
-from dirigera import Hub
-from dirigera.devices.outlet import Outlet
+from dirigera_new import Hub
+from dirigera_new.devices.outlet import Outlet
 
 from .switch import ikea_outlet
 from .dirigera_lib_patch import HubX
-from dirigera.devices.environment_sensor import EnvironmentSensor
-from dirigera.devices.controller import Controller
-from dirigera.devices.scene import Info, Icon
+from dirigera_new.devices.environment_sensor import EnvironmentSensor
+from dirigera_new.devices.controller import Controller
+from dirigera_new.devices.scene import Info, Icon
 
 from homeassistant import config_entries, core
 from homeassistant.components.sensor import SensorDeviceClass, SensorEntity

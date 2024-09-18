@@ -3,9 +3,9 @@
 import logging
 from typing import Any
 
-from dirigera import Hub
-from dirigera.devices.scene import Scene as DirigeraScene
-from dirigera.devices.scene import Trigger, TriggerDetails
+from dirigera_new import Hub
+from dirigera_new.devices.scene import Scene as DirigeraScene
+from dirigera_new.devices.scene import Trigger, TriggerDetails
 
 from homeassistant.components.scene import Scene
 from homeassistant.config_entries import ConfigEntry

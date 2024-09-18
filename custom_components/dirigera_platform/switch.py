@@ -1,7 +1,7 @@
 import logging
 
-from dirigera import Hub
-from dirigera.devices.outlet import Outlet
+from dirigera_new import Hub
+from dirigera_new.devices.outlet import Outlet
 
 from homeassistant import config_entries, core
 from homeassistant.components.switch import SwitchEntity

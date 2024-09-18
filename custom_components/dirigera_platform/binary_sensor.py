@@ -1,9 +1,9 @@
 import logging
 
-from dirigera import Hub
-from dirigera.devices.motion_sensor import MotionSensor
-from dirigera.devices.open_close_sensor import OpenCloseSensor
-from dirigera.devices.water_sensor import WaterSensor
+from dirigera_new import Hub
+from dirigera_new.devices.motion_sensor import MotionSensor
+from dirigera_new.devices.open_close_sensor import OpenCloseSensor
+from dirigera_new.devices.water_sensor import WaterSensor
 
 from homeassistant import config_entries, core
 from homeassistant.components.binary_sensor import BinarySensorDeviceClass, BinarySensorEntity

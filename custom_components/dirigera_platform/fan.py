@@ -2,9 +2,9 @@ import datetime
 import logging
 import math
 
-from dirigera import Hub
-from dirigera.devices.air_purifier import FanModeEnum
-from dirigera.devices.air_purifier import AirPurifier
+from dirigera_new import Hub
+from dirigera_new.devices.air_purifier import FanModeEnum
+from dirigera_new.devices.air_purifier import AirPurifier
 
 from homeassistant import config_entries, core
 from homeassistant.components.binary_sensor import (

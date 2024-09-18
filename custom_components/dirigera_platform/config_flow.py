@@ -2,7 +2,7 @@ import logging
 import string
 from typing import Any, Dict
 
-from dirigera.hub.auth import get_token, random_code, send_challenge
+from dirigera_new.hub.auth import get_token, random_code, send_challenge
 import voluptuous as vol
 
 from homeassistant import config_entries, core
