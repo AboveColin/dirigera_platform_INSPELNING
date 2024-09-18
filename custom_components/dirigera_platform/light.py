@@ -1,9 +1,9 @@
 import logging
 from typing import Optional
 
-from dirigera_new import Hub
-from dirigera_new.devices.device import Room
-from dirigera_new.devices.light import Light
+from .dirigera_new import Hub
+from .dirigera_new.devices.device import Room
+from .dirigera_new.devices.light import Light
 
 from homeassistant import config_entries, core
 from homeassistant.components.light import (

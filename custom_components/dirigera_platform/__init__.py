@@ -4,8 +4,8 @@ from __future__ import annotations
 import asyncio
 import logging
 
-from dirigera_new import Hub 
-from dirigera_new.devices.scene import Scene as DirigeraScene
+from .dirigera_new import Hub 
+from .dirigera_new.devices.scene import Scene as DirigeraScene
 
 import voluptuous as vol
 
@@ -41,7 +41,7 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     logger.error("Complete async_setup...")
 
     def handle_dump_data(call):
-        import dirigera_new
+        from . import dirigera_new
 
         logger.info("=== START Devices JSON ===")
 

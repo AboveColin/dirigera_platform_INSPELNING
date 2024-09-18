@@ -8,7 +8,7 @@ import ssl
 import re
 from typing import Any 
 
-from dirigera_new import Hub 
+from .dirigera_new import Hub 
 from .const import DOMAIN
 
 from homeassistant.const import ATTR_ENTITY_ID 

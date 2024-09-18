@@ -5,7 +5,7 @@ from homeassistant.components.fan import FanEntity, FanEntityFeature
 import logging
 import datetime
 import math
-from dirigera_new.devices.air_purifier import FanModeEnum
+from .dirigera_new.devices.air_purifier import FanModeEnum
 from ..sensor import ikea_vindstyrka_device
 from ..const import DOMAIN
 

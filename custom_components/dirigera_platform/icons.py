@@ -2,7 +2,7 @@
 
 import logging
 
-from dirigera_new.devices.scene import Icon
+from .dirigera_new.devices.scene import Icon
 
 logger = logging.getLogger("custom_components.dirigera_platform")
 

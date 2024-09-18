@@ -2,10 +2,10 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional
 from typing import Any, Optional, Dict
 
-from dirigera_new import Hub
+from .dirigera_new import Hub
 
-from dirigera_new.devices.device import Attributes, Device
-from dirigera_new.hub.abstract_smart_home_hub import AbstractSmartHomeHub
+from .dirigera_new.devices.device import Attributes, Device
+from .dirigera_new.hub.abstract_smart_home_hub import AbstractSmartHomeHub
 
 # Patch to fix issues with motion sensor
 class HubX(Hub):

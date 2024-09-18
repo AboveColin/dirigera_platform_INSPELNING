@@ -1,6 +1,6 @@
 import logging
-from dirigera_new import Hub
-from dirigera_new.devices.blinds import Blind
+from .dirigera_new import Hub
+from .dirigera_new.devices.blinds import Blind
 
 from homeassistant import config_entries, core
 from homeassistant.components.cover import (
